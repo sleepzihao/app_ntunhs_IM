@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">HW</string>
+    <string-array name="spinner">
+        <item>0大</item>
+        <item>1大</item>
+        <item>2大</item>
+        <item>3大</item>
+        <item>4大</item>
+        <item>5大</item>
+        <item>6大</item>
+        <item>7大</item>
+        <item>8大</item>
+        <item>9大</item>
+        <item>10大</item>
+        <item>11大</item>
+    </string-array>
+
+    <string-array name="spinner2">
+        <item>0小</item>
+        <item>1小</item>
+        <item>2小</item>
+        <item>3小</item>
+        <item>4小</item>
+        <item>5小</item>
+        <item>6小</item>
+        <item>7小</item>
+        <item>8小</item>
+        <item>9小</item>
+        <item>10小</item>
+        <item>11小</item>
+    </string-array>
+</resources>
