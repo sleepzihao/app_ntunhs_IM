@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Hw5</string>
+    <string name="play_choose_a_button">Play choose a button</string>
+    <string name="paper">布</string>
+    <string name="rock">石頭</string>
+    <string name="scissors">剪刀</string>
+    <string name="wait_palyer">Wait player</string>
+    <string name="player">Player</string>
+    <string name="computer">Computer</string>
+    <string name="rock_paper_scissors">Rock paper scisssors</string>
+    <string name="win">贏了!!!!!!</string>
+    <string name="lose">你輸了QQQ</string>
+    <string name="draw">平手...</string>
+</resources>
