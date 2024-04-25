@@ -2,11 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
 }
-android{
-    viewBinding{
-        enable=true
-    }
-}
+
 android {
     namespace = "com.example.guess_number"
     compileSdk = 34
@@ -36,6 +32,10 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+
+    buildFeatures{
+        viewBinding = true
     }
 }
 

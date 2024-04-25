@@ -3,6 +3,7 @@ package com.example.guess_number
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -14,41 +15,41 @@ import kotlin.random.Random
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
-    val TAG:String = MainActivity::class.java.simpleName
     private lateinit var handler: Handler
     private lateinit var binding: ActivityMainBinding
     private val game = GuessingGame()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
 
-        val textView = findViewById<TextView>(R.id.textView)
-        val result_textView = findViewById<TextView>(R.id.result_textView)
-        val guess_button = findViewById<Button>(R.id.guess_button)
-        val reset_button = findViewById<Button>(R.id.reset_button)
-        val editText = findViewById<EditText>(R.id.editText)
+        handler = Handler(Looper.getMainLooper())
 
-        var secret: Int = Random.nextInt(10) + 1
-
-        guess_button.setOnClickListener {
-            val inputText = editText.text.toString()
-            if (inputText.isNotEmpty()) {
-                val validate_num: Int = inputText.toInt() - secret
-                var ans_str: String = "恭喜!你猜對了!!!"
-                if (validate_num > 0) {
-                    ans_str = "你猜太大了!!"
-                } else if (validate_num < 0) {
-                    ans_str = "你猜小了，猜大一些~"
-                }
-                textView.text = ans_str
-            } else {
-                Toast.makeText(this, "請輸入數字", Toast.LENGTH_SHORT).show()
+        binding.guessButton.setOnClickListener {
+            val guessNum = binding.editText.text.toString().toInt()
+            val resultText = game.guessNumber(guessNum)
+            binding.textView.text = game.getRangeText()
+            binding.resultTextView.text = resultText
+            if (resultText == "猜對了") {
+                handler.postDelayed({
+                    Toast.makeText(this, "六秒後重置", Toast.LENGTH_SHORT).show()
+                    game.resetGame()
+                    binding.resultTextView.text = "再猜一次"
+                    binding.textView.text = "下一回合"
+                }, 6000)
             }
         }
 
-        reset_button.setOnClickListener {
-            textView.text
+        binding.resetButton.setOnClickListener {
+            game.resetGame()
+            binding.resultTextView.text = "再猜一次"
+
         }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        handler.removeCallbacksAndMessages(null)
     }
 }
