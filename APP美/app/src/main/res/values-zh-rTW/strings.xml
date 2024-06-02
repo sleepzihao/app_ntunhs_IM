@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EX</string>
+    <string name="height">身高</string>
+    <string name="weight">體重</string>
+    <string name="gender">性別</string>
+    <string name="male">男</string>
+    <string name="female">女</string>
+    <string name="pregnant">懷孕狀態</string>
+    <string name="not_or_first_trimester">沒有或初期</string>
+    <string name="second_trimester">中後期</string>
+    <string name="third_trimester">後期</string>
+    <string name="job_type">工作狀態</string>
+    <string name="mild">輕度</string>
+    <string name="moderate">重度</string>
+    <string name="severe">重度</string>
+    <string name="send">送出</string>
+    <string name="back">返回</string>
+    <string name="calculation_results">計算結果</string>
+    <string name="again">再一次</string>
+    <string name="main">首頁</string>
+    <string name="calculate_daily_calories">計算每日熱量</string>
+    <string name="aldult">成人</string>
+    <string name="child">小孩</string>
+</resources>

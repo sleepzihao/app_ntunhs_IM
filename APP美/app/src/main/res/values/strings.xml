@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">EX</string>
+    <string name="height">height</string>
+    <string name="weight">weight</string>
+    <string name="gender">gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="boy" translatable="false">Boy</string>
+    <string name="girl" translatable="false">Girl</string>
+    <string name="pregnant">pregnant</string>
+    <string name="not_or_first_trimester">Not or First trimester</string>
+    <string name="second_trimester">Second trimester</string>
+    <string name="third_trimester">Third trimester</string>
+    <string name="job_type">job_type</string>
+    <string name="mild">Mild</string>
+    <string name="moderate">Moderate</string>
+    <string name="severe">Severe</string>
+    <string name="send">Send</string>
+    <string name="back">back</string>
+    <string name="calculation_results">Calculation results</string>
+    <string name="again">again</string>
+    <string name="main">main</string>
+    <string name="calculate_daily_calories">Calculate daily calories</string>
+    <string name="aldult">aldult</string>
+    <string name="child">child</string>
+</resources>
